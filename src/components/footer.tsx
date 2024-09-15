@@ -47,7 +47,7 @@ export function FooterComponent() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <p className="text-blue-200">Phone: +91-9733203984</p>
-            <p className="text-blue-200">Email: info@hyperdigital.com</p>
+            <p className="text-blue-200">Email: admin@hyperdigital.in</p>
             <p className="text-blue-200">
               Navi Mumbai, India - 400614
             </p>

@@ -65,7 +65,7 @@ export default function Hero() {
           </span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 mx-10">
-          <span className="inline-block ">
+          <span className="inline-block animate-typography">
             Transform your online identity with Hyperdigital, where cutting-edge
             technology meets creative design. Let us build a powerful, engaging
             digital experience that resonates with your audience and drives
