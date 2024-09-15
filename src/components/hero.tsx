@@ -22,7 +22,7 @@ export default function Hero() {
   const [isErasing, setIsErasing] = useState(false);
 
   useEffect(() => {
-    let timer : NodeJS.Timeout;
+    let timer: NodeJS.Timeout;
 
     if (isTyping) {
       if (displayedText.length < words[currentWordIndex].length) {
@@ -54,16 +54,13 @@ export default function Hero() {
   }, [displayedText, isTyping, isErasing, currentWordIndex]);
 
   return (
-    <div className="relative h-[calc(100vh-80px)] flex flex-col items-center justify-center bg-white text-black">
+    <div className="relative h-[calc(100vh-180px)] mt-[100px] flex flex-col items-center justify-center bg-gradient-to-bl from-blue-100 via-purple-200 to-indigo-300 bg-cover bg-center bg-no-repeat text-black rounded-lg">
       <div className="text-center">
         <h1 className="text-3xl md:text-6xl font-bold mb-4">
           <span className="w-full text-center text-4xl font-extrabold text-slate-900 md:text-left md:text-4xl lg:w-10/12 xl:text-6xl">
             Elevate Your{" "}
-            <span
-              className="py-2 inline-block bg-gradient-to-br from-blue-500 via-purple-700 to-primary bg-clip-text text-transparent animate-blur"
-              style={{ minHeight: "1.2em" }} // Add minHeight to maintain the space
-            >
-              {displayedText || "\u00A0" /* Non-breaking space when text is empty */}
+            <span className="py-2 inline-block bg-gradient-to-br from-blue-500 via-purple-700 to-primary bg-clip-text text-transparent animate-blur">
+              {displayedText || "\u00A0"}
             </span>
           </span>
         </h1>
@@ -100,7 +97,7 @@ export default function Hero() {
           </Button>
         </div>
         {/* Scroll Down Animation */}
-        <div className="pt-12">
+        <div className="mt-10">
           <div
             className="text-black animate-bounce cursor-pointer scroll-smooth"
             onClick={() => {

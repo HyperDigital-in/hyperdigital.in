@@ -5,7 +5,12 @@ import Marquee from "react-fast-marquee";
 
 export function ClientsComponent() {
   const clients = [
-    "https://hyperdigital.in/wp-content/uploads/2024/09/1043.png",
+    "/clients/aneri.png",
+    "/clients/indian-accent.png",
+    "/clients/dr-pallavi-patekar.png",
+    "/clients/jijo.png",
+    "/clients/prashant.png",
+    "/clients/steel-products.png",
   ];
 
   return (
@@ -16,7 +21,7 @@ export function ClientsComponent() {
         </h2>
         <Marquee
           gradient={false}
-          speed={40}
+          speed={50}
           pauseOnHover={true}
           autoFill={true}
           className="overflow-hidden"

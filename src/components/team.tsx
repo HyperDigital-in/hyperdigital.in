@@ -15,8 +15,7 @@ export function TeamComponent() {
     {
       name: "Kishan Tripathi",
       role: "Marketing Coordinator",
-      image:
-        "https://i1.sndcdn.com/artworks-lzVd2mJyMOJTUlhl-mXw2CA-t500x500.jpg",
+      image: "/teams/default-avatar.png",
       bio: "Kishan manages our marketing campaigns, working closely with clients and teams to achieve business goals.",
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -24,8 +23,7 @@ export function TeamComponent() {
     {
       name: "Subham Singh",
       role: "Project Manager",
-      image:
-        "https://i1.sndcdn.com/artworks-lzVd2mJyMOJTUlhl-mXw2CA-t500x500.jpg",
+      image: "/teams/default-avatar.png",
       bio: "Subham leads our development projects, ensuring high-quality, efficient, and innovative solutions.",
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -33,8 +31,7 @@ export function TeamComponent() {
     {
       name: "Manish Basotia",
       role: "Financial Advisor",
-      image:
-        "https://i1.sndcdn.com/artworks-lzVd2mJyMOJTUlhl-mXw2CA-t500x500.jpg",
+      image: "/teams/default-avatar.png",
       bio: "Manish oversees our financial operations,  to ensure our business is financially runs smoothly and efficiently.",
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -42,8 +39,7 @@ export function TeamComponent() {
     {
       name: "Ayush Khushwaha",
       role: "Marketing Manager",
-      image:
-        "https://i1.sndcdn.com/artworks-lzVd2mJyMOJTUlhl-mXw2CA-t500x500.jpg",
+      image: "/teams/default-avatar.png",
       bio: "Ayush leads our marketing team, ensuring our clients' brands are represented effectively and consistently.",
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -51,8 +47,7 @@ export function TeamComponent() {
     {
       name: "Anandita Duvey",
       role: "Social Media Manager",
-      image:
-        "https://i1.sndcdn.com/artworks-lzVd2mJyMOJTUlhl-mXw2CA-t500x500.jpg",
+      image: "/teams/default-avatar.png",
       bio: "Anandita manages our social media presence, creating engaging content and building relationships with our audience.",
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
