@@ -128,6 +128,7 @@ export function TeamComponent() {
                       width={300}
                       height={300}
                       className="rounded-full mx-auto mb-4"
+                      loading="lazy"
                     />
                     <h3 className="text-xl font-semibold text-center text-blue-700">
                       {member.name}

@@ -34,6 +34,7 @@ export function ClientsComponent() {
                 width={120}
                 height={60}
                 className="max-w-full h-auto"
+                loading="lazy"
               />
             </div>
           ))}
