@@ -68,7 +68,7 @@ export default function TermsAndConditions() {
               <p>
                 <ul className="list-disc pl-5">
                   <li><strong>Included Revisions:</strong> The project includes up to 3 rounds of revisions at no additional cost.</li>
-                  <li><strong>Additional Revisions:</strong> Any revisions beyond the included rounds will be billed at an hourly rate of [Rate] per hour.</li>
+                  <li><strong>Additional Revisions:</strong> Any revisions beyond the included rounds will be billed at an hourly rate.</li>
                   <li><strong>Major Changes:</strong> Major changes that alter the project&apos;s scope, structure, or functionalities after final approval of deliverables will require a new agreement and additional charges.</li>
                 </ul>
               </p>
