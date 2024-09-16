@@ -140,7 +140,7 @@ export default function TermsAndConditions() {
             <div className="pt-6 text-center">
               <p className="mb-4 text-purple-700">By using our services and this website, you agree to these terms and conditions.</p>
               <Button className="bg-indigo-600 hover:bg-indigo-700 text-white">
-                <Link href="/#pricing">Return to Home</Link>
+                <Link href="/">Return to Home</Link>
               </Button>
             </div>
           </div>
