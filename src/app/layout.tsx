@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NavbarComponent from "@/components/navbar";
+import { FooterComponent } from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -52,7 +54,15 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>HyperDigital - Marketing and Software Development</title>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="min-h-screen bg-white text-black flex justify-center">
+          <div className="w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+            <NavbarComponent />
+            {children}
+            <FooterComponent />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

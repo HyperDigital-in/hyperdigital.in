@@ -72,7 +72,7 @@ export function ServicesComponent() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-blue-50">
+    <section id="services" className="py-20 bg-blue-50 rounded-lg">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-blue-800">
           Our Services
