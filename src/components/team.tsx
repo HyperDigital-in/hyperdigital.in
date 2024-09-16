@@ -111,7 +111,7 @@ export function TeamComponent() {
   };
 
   return (
-    <section id="team" className="py-20 bg-blue-50">
+    <section id="team" className="py-20 bg-blue-50 rounded-lg">
       <div className="container mx-auto px-4 max-w-7xl">
         <h2 className="text-3xl font-bold mb-12 text-center text-blue-800">
           Our Team

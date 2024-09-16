@@ -17,29 +17,29 @@ export function FooterComponent() {
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#about" className="text-blue-200 hover:text-white">
+                <Link href="/#about" className="text-blue-200 hover:text-white">
                   About
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="/#services"
                   className="text-blue-200 hover:text-white"
                 >
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="#team" className="text-blue-200 hover:text-white">
-                  Team
+                <Link href="/pricing" className="text-blue-200 hover:text-white">
+                  Pricing
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#contact"
+                  href="/terms"
                   className="text-blue-200 hover:text-white"
                 >
-                  Contact
+                  Terms and Conditions
                 </Link>
               </li>
             </ul>

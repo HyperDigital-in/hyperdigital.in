@@ -31,7 +31,9 @@ export function ContactComponent() {
 
   const [errors, setErrors] = useState<FormErrors>({}); // Now we explicitly type errors
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
@@ -51,14 +53,17 @@ export function ContactComponent() {
 
     if (Object.keys(newErrors).length === 0) {
       // No errors, proceed with submission
-      const response = await fetch(process.env.NEXT_PUBLIC_FORMSPREE_FORM_URL as string, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_FORMSPREE_FORM_URL as string,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         console.log("Form submitted successfully!");
@@ -75,15 +80,18 @@ export function ContactComponent() {
     }
   };
 
-    return (
-    <section id="contact" className="py-20 bg-white">
+  return (
+    <section id="contact" className="py-20 mb-20 bg-blue-50 rounded-lg">
       <h2 className="text-3xl font-bold mb-12 text-center text-blue-800">
         Contact Us
       </h2>
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto px-4">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
               Your Name
             </label>
             <Input
@@ -96,10 +104,15 @@ export function ContactComponent() {
               onChange={handleChange}
               required
             />
-            {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-red-500 text-sm">{errors.name}</p>
+            )}
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Your Email
             </label>
             <Input
@@ -112,10 +125,15 @@ export function ContactComponent() {
               onChange={handleChange}
               required
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
           </div>
           <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="subject"
+              className="block text-sm font-medium text-gray-700"
+            >
               Subject
             </label>
             <Input
@@ -128,10 +146,15 @@ export function ContactComponent() {
               onChange={handleChange}
               required
             />
-            {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
+            {errors.subject && (
+              <p className="text-red-500 text-sm">{errors.subject}</p>
+            )}
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700"
+            >
               Your Message
             </label>
             <Textarea
@@ -143,7 +166,9 @@ export function ContactComponent() {
               onChange={handleChange}
               required
             />
-            {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message}</p>
+            )}
           </div>
           <Button
             type="submit"
@@ -153,7 +178,12 @@ export function ContactComponent() {
           </Button>
         </form>
       </div>
+      <div className="pt-6 text-center text-blue-800">
+          <p>
+            Alternatively, you can reach us in the below mentioned ways
+          </p>
+          <p>Email: admin@hyperdigital.in | Phone: +91-9733203984</p>
+        </div>
     </section>
   );
 }
-  
