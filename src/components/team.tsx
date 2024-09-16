@@ -21,7 +21,7 @@ export function TeamComponent() {
       twitter: "https://twitter.com",
     },
     {
-      name: "Subham Singh",
+      name: "Shubham Singh",
       role: "Project Manager",
       image: "/teams/default-avatar.png",
       bio: "Subham leads our development projects, ensuring high-quality, efficient, and innovative solutions.",
@@ -37,7 +37,7 @@ export function TeamComponent() {
       twitter: "https://twitter.com",
     },
     {
-      name: "Ayush Khushwaha",
+      name: "Ayush Kushwaha",
       role: "Marketing Manager",
       image: "/teams/default-avatar.png",
       bio: "Ayush leads our marketing team, ensuring our clients' brands are represented effectively and consistently.",
