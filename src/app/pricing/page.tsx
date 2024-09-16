@@ -1,3 +1,5 @@
+"use client";
+
 import { ContactComponent } from "@/components/contact";
 import { Button } from "@/components/ui/button";
 import {
@@ -146,7 +148,15 @@ export default function PricingPage() {
                 </ul>
               </CardContent>
               <CardFooter className="mt-4">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                <Button
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  onClick={() => {
+                    const aboutElement = document.getElementById("contact");
+                    if (aboutElement) {
+                      aboutElement.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
                   Enquire for Pricing
                 </Button>
               </CardFooter>
@@ -180,7 +190,15 @@ export default function PricingPage() {
                 </ul>
               </CardContent>
               <CardFooter className="mt-4">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                <Button
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  onClick={() => {
+                    const aboutElement = document.getElementById("contact");
+                    if (aboutElement) {
+                      aboutElement.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
                   Enquire for Pricing
                 </Button>
               </CardFooter>
