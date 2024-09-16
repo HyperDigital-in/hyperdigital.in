@@ -31,7 +31,7 @@ export default function TermsAndConditions() {
                   <li><strong>Payment Schedule:</strong>
                     <ul className="list-disc pl-5">
                       <li>50% of the total project cost is due upon signing this Agreement.</li>
-                      <li>30% is due at the project's midway point (as outlined in the project timeline).</li>
+                      <li>30% is due at the project&apos;s midway point (as outlined in the project timeline).</li>
                       <li>The final 20% is due upon project completion and approval.</li>
                     </ul>
                   </li>
@@ -69,7 +69,7 @@ export default function TermsAndConditions() {
                 <ul className="list-disc pl-5">
                   <li><strong>Included Revisions:</strong> The project includes up to 3 rounds of revisions at no additional cost.</li>
                   <li><strong>Additional Revisions:</strong> Any revisions beyond the included rounds will be billed at an hourly rate of [Rate] per hour.</li>
-                  <li><strong>Major Changes:</strong> Major changes that alter the project's scope, structure, or functionalities after final approval of deliverables will require a new agreement and additional charges.</li>
+                  <li><strong>Major Changes:</strong> Major changes that alter the project&apos;s scope, structure, or functionalities after final approval of deliverables will require a new agreement and additional charges.</li>
                 </ul>
               </p>
             </section>
@@ -108,7 +108,7 @@ export default function TermsAndConditions() {
               <p>
                 <ul className="list-disc pl-5">
                   <li><strong>Workmanship Warranty:</strong> HyperDigital guarantees that all work will meet industry standards. Any bugs or technical issues discovered within 30 days of project completion will be resolved free of charge.</li>
-                  <li><strong>Limitation of Liability:</strong> HyperDigital will not be liable for any damages, loss of profits, or data issues arising from the use of the final deliverables, except in cases of proven negligence. HyperDigital's maximum liability is limited to the total project cost.</li>
+                  <li><strong>Limitation of Liability:</strong> HyperDigital will not be liable for any damages, loss of profits, or data issues arising from the use of the final deliverables, except in cases of proven negligence. HyperDigital&apos;s maximum liability is limited to the total project cost.</li>
                 </ul>
               </p>
             </section>
@@ -117,7 +117,7 @@ export default function TermsAndConditions() {
               <h2 className="text-xl font-semibold text-indigo-600 mb-2">10. Termination</h2>
               <p>
                 <ul className="list-disc pl-5">
-                  <li><strong>Client Termination:</strong> The Client may terminate this Agreement at any time by providing 15 days' written notice. The Client will be billed for all work completed up to the termination date.</li>
+                  <li><strong>Client Termination:</strong> The Client may terminate this Agreement at any time by providing 15 days&apos; written notice. The Client will be billed for all work completed up to the termination date.</li>
                   <li><strong>Service Provider Termination:</strong> HyperDigital reserves the right to terminate this Agreement in cases of non-payment, breach of terms, or unresponsiveness. HyperDigital will notify the Client of any such issues before termination.</li>
                 </ul>
               </p>
