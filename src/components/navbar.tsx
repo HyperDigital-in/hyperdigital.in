@@ -8,12 +8,8 @@ import Image from "next/image";
 export default function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleScroll = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsOpen(false); // Close mobile menu after selection
+  const handleScroll = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -51,64 +47,41 @@ export default function NavbarComponent() {
         {/* Navigation Links for Desktop */}
         <ul className={`hidden lg:flex space-x-6`}>
           <li>
-            <a
-              href={`#about`}
+            <Link
+              href="/#about"
               className="text-blue-600 hover:text-purple-600"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll("about");
-              }}
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href={`#services`}
+            <Link
+              href="/#services"
               className="text-blue-600 hover:text-purple-600"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll("services");
-              }}
             >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href={`#team`}
-              className="text-blue-600 hover:text-purple-600"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll("team");
-              }}
-            >
+            <Link href="/#team" className="text-blue-600 hover:text-purple-600">
               Team
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href={`#pricing`}
+            <Link
+              href="/#pricing"
               className="text-blue-600 hover:text-purple-600"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll("pricing");
-              }}
             >
               Pricing
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href={`#contact`}
+            <Link
+              href="/#contact"
               className="text-blue-600 hover:text-purple-600"
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll("contact");
-              }}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -118,57 +91,42 @@ export default function NavbarComponent() {
           isOpen ? "block" : "hidden"
         } bg-white border-t border-blue-200`}
       >
-        <div className="flex flex-col space-y-4 py-4 px-6">
-          <a
-            href={`#about`}
+        <div className="flex flex-col justify-between items-center space-y-4 py-4 px-6">
+          <Link
+            href="/#about"
             className="text-blue-600 hover:text-purple-600"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("about");
-            }}
+            onClick={() => handleScroll()}
           >
             About
-          </a>
-          <a
-            href={`#services`}
+          </Link>
+          <Link
+            href="/#services"
             className="text-blue-600 hover:text-purple-600"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("services");
-            }}
+            onClick={() => handleScroll()}
           >
             Services
-          </a>
-          <a
-            href={`#team`}
+          </Link>
+          <Link
+            href="/#team"
             className="text-blue-600 hover:text-purple-600"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("team");
-            }}
+            onClick={() => handleScroll()}
           >
             Team
-          </a>
-          <a
-            href={`#pricing`}
+          </Link>
+          <Link
+            href="/#pricing"
             className="text-blue-600 hover:text-purple-600"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("pricing");
-            }}
+            onClick={() => handleScroll()}
           >
             Pricing
-          </a>
-          <a
-            href={`#contact`}
+          </Link>
+          <Link
+            href="/#contact"
             className="text-blue-600 hover:text-purple-600"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScroll("contact");
-            }}
+            onClick={() => handleScroll()}
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
