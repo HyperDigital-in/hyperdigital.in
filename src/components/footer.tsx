@@ -91,7 +91,9 @@ export function FooterComponent() {
   );
 }
 
-function LinkedinIcon(props: any) {
+import React from 'react';
+
+function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -116,7 +118,7 @@ function LinkedinIcon(props: any) {
   );
 }
 
-function XIcon(props: any) {
+function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -138,7 +140,7 @@ function XIcon(props: any) {
   );
 }
 
-function InstagramIcon(props: any) {
+function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
