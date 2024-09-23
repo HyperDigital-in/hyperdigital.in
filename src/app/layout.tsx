@@ -39,10 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta
-          name="title"
-          content="hyperdigital"
-        />
+        <meta name="title" content="hyperdigital" />
         <meta
           name="description"
           content="HyperDigital provides top-tier marketing strategies and innovative software development solutions."
