@@ -36,7 +36,7 @@ export function ServicesComponent() {
     {
       title: "Innovative SaaS Solutions",
       description:
-        "AWe provide cloud-based SaaS solutions to streamline business processes, improve efficiency, and integrate seamlessly with existing systems.",
+        "We provide cloud-based SaaS solutions to streamline business processes, improve efficiency, and integrate seamlessly with existing systems.",
       icon: Monitor,
     },
     {
