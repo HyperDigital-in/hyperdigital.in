@@ -13,8 +13,8 @@ export default function NavbarComponent() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/30 border-b border-blue-200">
-      <div className="flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md max-w-7xl ">
+      <div className="flex justify-around items-center py-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center">
           <Image
             src="/logo/HDLogoTransparent.png"

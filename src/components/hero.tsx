@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const words = [
   "Creative Design",
@@ -20,6 +20,23 @@ export default function Hero() {
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [isErasing, setIsErasing] = useState(false);
+
+  const [text, setText] = useState("");
+  const fullText = "Elevate Your";
+
+  useEffect(() => {
+    let i = 0;
+    const typingInterval = setInterval(() => {
+      if (i < fullText.length) {
+        setText(fullText.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 50);
+
+    return () => clearInterval(typingInterval);
+  }, []);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -54,63 +71,94 @@ export default function Hero() {
   }, [displayedText, isTyping, isErasing, currentWordIndex]);
 
   return (
-    <div className="relative h-[calc(100vh-180px)] mt-[100px] flex flex-col items-center justify-center bg-gradient-to-bl from-blue-100 via-purple-200 to-indigo-300 bg-cover bg-center bg-no-repeat text-black rounded-lg">
-      <div className="text-center">
-        <h1 className="text-3xl md:text-6xl font-bold mb-4">
-          <span className="w-full text-center text-4xl font-extrabold text-slate-900 md:text-left md:text-4xl lg:w-10/12 xl:text-6xl">
-            Elevate Your{" "}
-            <span className="py-2 inline-block bg-gradient-to-br from-blue-500 via-purple-700 to-primary bg-clip-text text-transparent animate-blur">
-              {displayedText || "\u00A0"}
-            </span>
-          </span>
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 mx-10">
-          <span className="inline-block animate-typography">
-            Transform your online identity with Hyperdigital, where cutting-edge
-            technology meets creative design. Let us build a powerful, engaging
-            digital experience that resonates with your audience and drives
-            growth.
-          </span>
-        </p>
-        <div className="flex justify-center space-x-4">
-          <Button
-            className="bg-purple-600 hover:bg-purple-700 text-white hover:shadow-[0_0_5px_4px_rgba(128,0,255,0.5)] transition-shadow duration-300 ease-in-out"
-            onClick={() => {
-              const aboutElement = document.getElementById("about");
-              if (aboutElement) {
-                aboutElement.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+    <div className="flex justify-center bg-black">
+      <div className="relative h-screen w-full max-w-7xl overflow-hidden bg-black text-white">
+        {/* Floating shapes */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 h-16 w-16 rounded-full bg-purple-500 opacity-50"
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -100, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute top-3/4 right-1/4 h-24 w-24 rounded-lg bg-blue-500 opacity-50"
+          animate={{
+            x: [0, -150, 0],
+            y: [0, 100, 0],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 left-1/3 h-20 w-20 rounded-full bg-green-500 opacity-50"
+          animate={{
+            x: [0, 120, 0],
+            y: [0, -80, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+
+        {/* Main content */}
+        <div className="flex h-full flex-col items-center justify-center px-4 text-center">
+          <motion.h1
+            className="mb-6 text-4xl font-bold md:text-6xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {text} {displayedText || ""}
+          </motion.h1>
+          <motion.p
+            className="mb-8 max-w-2xl text-lg text-gray-300 glossy-text"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Empowering creators with cutting-edge AI tools and platforms.
+          </motion.p>
+          <motion.button
+            className="rounded-full bg-white px-8 py-3 font-semibold text-black transition-colors hover:bg-gray-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             Get Started
-          </Button>
-          <Button
-            className="bg-blue-600 hover:bg-blue-700 text-white hover:shadow-[0_0_5px_4px_rgba(0,112,255,0.5)] transition-shadow duration-300 ease-in-out"
-            onClick={() => {
-              const aboutElement = document.getElementById("contact");
-              if (aboutElement) {
-                aboutElement.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          >
-            Contact Us
-          </Button>
-        </div>
-        {/* Scroll Down Animation */}
-        <div className="mt-10">
-          <div
-            className="text-black animate-bounce cursor-pointer scroll-smooth"
-            onClick={() => {
-              const aboutElement = document.getElementById("about");
-              if (aboutElement) {
-                aboutElement.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          >
-            ↓ Scroll Down
-          </div>
+          </motion.button>
         </div>
       </div>
+      <style jsx>{`
+        .glossy-text {
+          background: linear-gradient(
+            to right,
+            #ffffff 20%,
+            #55c3f2 30%,
+            #5587f2 70%,
+            #ffffff 80%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+          background-size: 200% auto;
+          animation: shine 4s linear infinite;
+        }
+      `}</style>
     </div>
   );
 }
