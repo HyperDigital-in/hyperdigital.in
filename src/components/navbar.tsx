@@ -8,13 +8,21 @@ import Image from "next/image";
 export default function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleScroll = () => {
-    setIsOpen(false);
-  };
+  const handleToggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
+  const navLinks = [
+    { href: "/#about", label: "About" },
+    { href: "/#services", label: "Services" },
+    { href: "/#team", label: "Team" },
+    { href: "/#pricing", label: "Pricing" },
+    { href: "/#contact", label: "Contact" },
+  ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md max-w-7xl ">
-      <div className="flex justify-around items-center py-4 px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
+        {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/logo/HDLogoTransparent.png"
@@ -24,110 +32,42 @@ export default function NavbarComponent() {
             className="h-auto w-auto"
           />
         </Link>
-        {/* Menu Icon for Mobile */}
-        <Menu
-          className="lg:hidden text-blue-600 hover:text-purple-600 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </Menu>
-        {/* Navigation Links for Desktop */}
-        <ul className={`hidden lg:flex space-x-6`}>
-          <li>
-            <Link
-              href="/#about"
-              className="text-blue-600 hover:text-purple-600"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#services"
-              className="text-blue-600 hover:text-purple-600"
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="/#team" className="text-blue-600 hover:text-purple-600">
-              Team
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#pricing"
-              className="text-blue-600 hover:text-purple-600"
-            >
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#contact"
-              className="text-blue-600 hover:text-purple-600"
-            >
-              Contact
-            </Link>
-          </li>
+
+        {/* Desktop Navigation Links */}
+        <ul className="hidden lg:flex space-x-6">
+          {navLinks.map((link) => (
+            <li key={link.label}>
+              <Link href={link.href} className="text-gray-400 hover:text-white">
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
-      </div>
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden ${
-          isOpen ? "block" : "hidden"
-        } bg-white border-t border-blue-200`}
-      >
-        <div className="flex flex-col justify-between items-center space-y-4 py-4 px-6">
-          <Link
-            href="/#about"
-            className="text-blue-600 hover:text-purple-600"
-            onClick={() => handleScroll()}
-          >
-            About
-          </Link>
-          <Link
-            href="/#services"
-            className="text-blue-600 hover:text-purple-600"
-            onClick={() => handleScroll()}
-          >
-            Services
-          </Link>
-          <Link
-            href="/#team"
-            className="text-blue-600 hover:text-purple-600"
-            onClick={() => handleScroll()}
-          >
-            Team
-          </Link>
-          <Link
-            href="/#pricing"
-            className="text-blue-600 hover:text-purple-600"
-            onClick={() => handleScroll()}
-          >
-            Pricing
-          </Link>
-          <Link
-            href="/#contact"
-            className="text-blue-600 hover:text-purple-600"
-            onClick={() => handleScroll()}
-          >
-            Contact
-          </Link>
-        </div>
+
+        {/* Mobile Menu Icon */}
+        <Menu
+          className="lg:hidden text-blue-600 hover:text-purple-600 cursor-pointer"
+          onClick={handleToggleMenu}
+        />
+
+        {/* Mobile Navigation Links */}
+        {isOpen && (
+          <div className="absolute top-full left-0 w-full bg-white border-t border-blue-200 lg:hidden">
+            <ul className="flex flex-col items-center py-4 space-y-4">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-blue-600 hover:text-purple-600"
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );

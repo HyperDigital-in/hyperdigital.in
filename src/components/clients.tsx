@@ -14,9 +14,9 @@ export function ClientsComponent() {
   ];
 
   return (
-    <section className="py-20 bg-blue-50 rounded-lg">
+    <section className="py-20 bg-gradient-to-b from-purple-50 to-blue-50 rounded-lg mb-20">
       <div className="container mx-auto px-4 max-w-7xl">
-        <h2 className="text-3xl font-bold mb-12 text-center text-blue-800">
+        <h2 className="text-3xl font-bold mb-12 text-center text-black">
           Our Clients
         </h2>
         <Marquee
