@@ -64,13 +64,9 @@ export default function RootLayout({
         <title>HyperDigital - Marketing and Software Development</title>
       </head>
       <body className={inter.className}>
-        <div className="min-h-screen bg-white text-black flex justify-center">
-          <div className="w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-            <NavbarComponent />
-            {children}
-            <FooterComponent />
-          </div>
-        </div>
+        <NavbarComponent />
+        {children}
+        <FooterComponent />
       </body>
     </html>
   );
