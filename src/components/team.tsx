@@ -49,6 +49,14 @@ const team = [
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
   },
+  {
+    name: "Mayank Kankoriya",
+    role: "Project Coordinator",
+    image: "/teams/default-avatar.png",
+    bio: "Mayank coordinates project activities, manages resources to ensure project completion, and its success.",
+    linkedin: "https://linkedin.com",
+    twitter: "https://twitter.com",
+  },
 ];
 
 const sliderSettings = {
