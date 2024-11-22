@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState, ChangeEvent, FormEvent } from "react";
+import axios from "axios";
 
 interface FormData {
   name: string;
@@ -55,26 +56,31 @@ export function ContactComponent() {
 
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await fetch(
-          process.env.NEXT_PUBLIC_FORMSPREE_FORM_URL as string,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify(formData),
-          }
+        console.log(formData);
+        const data = new FormData();
+        console.log(data);
+        data.append("name", formData.name as string);
+        data.append("email", formData.email as string);
+        data.append("subject", formData.subject as string);
+        data.append("message", formData.message as string);
+        const response = await axios.post(
+          process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL as string,
+          data
         );
+        console.log(response);
 
-        if (response.ok) {
+        if (response.status === 200) {
           console.log("Form submitted successfully!");
+          alert("Form submitted successfully!");
           setFormData({ name: "", email: "", subject: "", message: "" });
         } else {
-          console.error("Form submission failed!");
+          alert(
+            "Technically error occured! Please contact us at the below email or phone number to reach us."
+          );
         }
       } catch (error) {
         console.error("Form submission error:", error);
+        alert("Form submission error!");
       }
     }
   };
