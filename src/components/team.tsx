@@ -12,7 +12,7 @@ const team = [
   {
     name: "Kishan Tripathi",
     role: "Marketing Coordinator",
-    image: "/teams/default-avatar.png",
+    image: "/teams/boy_avatar.png",
     bio: "Kishan manages our marketing campaigns, working closely with clients and teams to achieve business goals.",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
@@ -20,7 +20,7 @@ const team = [
   {
     name: "Shubham Singh",
     role: "Project Manager",
-    image: "/teams/default-avatar.png",
+    image: "/teams/boy_avatar.png",
     bio: "Shubham leads our development projects, ensuring high-quality, efficient, and innovative solutions.",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
@@ -28,7 +28,7 @@ const team = [
   {
     name: "Manish Basotia",
     role: "Financial Advisor",
-    image: "/teams/default-avatar.png",
+    image: "/teams/boy_avatar.png",
     bio: "Manish ensures smooth financial operations through strategic planning, optimizing efficiency, and supporting business growth.",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
@@ -36,7 +36,7 @@ const team = [
   {
     name: "Ayush Kushwaha",
     role: "Marketing Manager",
-    image: "/teams/default-avatar.png",
+    image: "/teams/boy_avatar.png",
     bio: "Ayush leads our marketing team, ensuring our clients' brands are represented effectively and consistently.",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
@@ -44,7 +44,7 @@ const team = [
   {
     name: "Anandita Duvey",
     role: "Social Media Manager",
-    image: "/teams/default-avatar.png",
+    image: "/teams/girl_avatar.png",
     bio: "Anandita develops social media strategies for clients, creating engaging content to boost brand presence and engagement.",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
@@ -52,7 +52,7 @@ const team = [
   {
     name: "Mayank Kankoriya",
     role: "Project Coordinator",
-    image: "/teams/default-avatar.png",
+    image: "/teams/boy_avatar.png",
     bio: "Mayank coordinates project activities, manages resources to ensure project completion, and its success.",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
