@@ -9,14 +9,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const team = [
-  {
-    name: "Kishan Tripathi",
-    role: "Marketing Coordinator",
-    image: "/teams/boy_avatar.png",
-    bio: "Kishan manages our marketing campaigns, working closely with clients and teams to achieve business goals.",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-  },
+  // {
+  //   name: "Kishan Tripathi",
+  //   role: "Marketing Coordinator",
+  //   image: "/teams/boy_avatar.png",
+  //   bio: "Kishan manages our marketing campaigns, working closely with clients and teams to achieve business goals.",
+  //   linkedin: "https://linkedin.com",
+  //   twitter: "https://twitter.com",
+  // },
   {
     name: "Shubham Singh",
     role: "Project Manager",
@@ -25,14 +25,14 @@ const team = [
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
   },
-  {
-    name: "Manish Basotia",
-    role: "Financial Advisor",
-    image: "/teams/boy_avatar.png",
-    bio: "Manish ensures smooth financial operations through strategic planning, optimizing efficiency, and supporting business growth.",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-  },
+  // {
+  //   name: "Manish Basotia",
+  //   role: "Financial Advisor",
+  //   image: "/teams/boy_avatar.png",
+  //   bio: "Manish ensures smooth financial operations through strategic planning, optimizing efficiency, and supporting business growth.",
+  //   linkedin: "https://linkedin.com",
+  //   twitter: "https://twitter.com",
+  // },
   {
     name: "Ayush Kushwaha",
     role: "Marketing Manager",
